@@ -2,23 +2,3 @@ h1 {
     font-size: 150%;
     margin-bottom: 30px;
 }
-
-div.cover-photo-holder{
-    float: right;
-}
-
-div.cover-photo-holder img{
-    margin: 5px;
-    width: 150 px;
-    height: 150 px;
-}
-
-div.recipe {
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    width: 600px;
-}
-div.recipe h4 {
-    font-size: 120%;
-}

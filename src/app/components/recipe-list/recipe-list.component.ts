@@ -16,16 +16,16 @@ export class RecipeListComponent {
   constructor() {
     this.recipes = [
       new Recipe('Banana bread', 
-      'This is banana bread', 
+      'This is banana bread', 1,2,
       [], [], ''),
       new Recipe('Farm bread', 
-      'This is Farm bread', 
+      'This is Farm bread', 3,4,
       [], [], ''),
       new Recipe('Beef', 
-      'This is Beef', 
+      'This is Beef', 5,6,
       [], [], ''),
       new Recipe('Kabab ', 
-      'This is Kabab', 
+      'This is Kabab', 7,8,
       [], [], '')
     ]
   }
