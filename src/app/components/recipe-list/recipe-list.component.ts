@@ -17,7 +17,7 @@ export class RecipeListComponent {
    */
   constructor() {
     this.recipe_in_progress = Recipe.createBlank();
-    
+
     this.recipes = [
       new Recipe('Banana bread', 
       'This is banana bread', 1,2,
@@ -32,6 +32,12 @@ export class RecipeListComponent {
       'This is Kabab', 7,8,
       [], [], '')
     ]
+  }
+
+  addRecipeCliked():void {
+    console.log(JSON.stringify(this.recipe_in_progress, null, 2));
+    this.recipes.unshift(this.recipe_in_progress);
+    this.recipe_in_progress = Recipe.createBlank();
   }
  
 }
