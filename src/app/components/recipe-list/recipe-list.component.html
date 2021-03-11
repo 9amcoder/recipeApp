@@ -1,21 +1,24 @@
-<h1>This is list of all available recipes </h1>
+<h1>This is list of all available recipes</h1>
 
 <div *ngFor="let recipe of recipes">
-    <app-recipe-summary [recipe]='recipe'></app-recipe-summary>
+    <app-recipe-summary [recipe]="recipe"></app-recipe-summary>
 </div>
 
-<div style="clear:both"></div>
+<div style="clear: both"></div>
 
-<div class='newrecipe card' style='width:600px'>
-    <h4 class='card-header'>Add New Recipe</h4>
-    <div class='card-body'>
-        <input type='text' placeholder='Recipe Title' name='title' style="width: 400px;" />
-        <textarea style="width: 400px; " rows=5 placeholder="Description" name="discription"></textarea>
+<div class="newrecipe card" style="width: 600px">
+    <h4 class="card-header">Add New Recipe</h4>
+    <div class="card-body">
+        <input type="text" [(ngModel)]="recipe_in_progress.title" placeholder="Recipe Title" name="title" style="width: 400px" />
+        <textarea [(ngModel)]="recipe_in_progress.description" style="width: 400px" rows="5" placeholder="Description" name="discription"></textarea>
         <div>
-            <input type="text" placeholder="Preparation time" name="preparation_time" style="width: 350px;" />Minutes
+            <input [(ngModel)]="recipe_in_progress.preparation_time" type="text" placeholder="Preparation time" name="preparation_time" style="width: 350px" />Minutes
         </div>
         <div>
-            <input type="text" placeholder="Feed this many " name="feed_this_many" style="width: 350px;" />People
+            <input [(ngModel)]="recipe_in_progress.feed_this_many" type="text" placeholder="Feed this many " name="feed_this_many" style="width: 350px" />People
+        </div>
+        <div>
+            <input type="button" value="Add Recipe" (click)="addRecipeCliked()">
         </div>
     </div>
 </div>
