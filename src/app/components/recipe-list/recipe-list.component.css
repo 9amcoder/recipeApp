@@ -2,3 +2,12 @@ h1 {
     font-size: 150%;
     margin-bottom: 30px;
 }
+
+div.newrecipe input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.newrecipe textarea {
+    margin-bottom: 10px;
+}

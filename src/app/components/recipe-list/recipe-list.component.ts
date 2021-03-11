@@ -8,12 +8,16 @@ import { Recipe } from 'src/app/model/recipe';
 })
 export class RecipeListComponent {
 
+  recipe_in_progress: Recipe;
+  
   recipes: Recipe[];
 
   /**
    *
    */
   constructor() {
+    this.recipe_in_progress = Recipe.createBlank();
+    
     this.recipes = [
       new Recipe('Banana bread', 
       'This is banana bread', 1,2,

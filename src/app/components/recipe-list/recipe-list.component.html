@@ -3,3 +3,19 @@
 <div *ngFor="let recipe of recipes">
     <app-recipe-summary [recipe]='recipe'></app-recipe-summary>
 </div>
+
+<div style="clear:both"></div>
+
+<div class='newrecipe card' style='width:600px'>
+    <h4 class='card-header'>Add New Recipe</h4>
+    <div class='card-body'>
+        <input type='text' placeholder='Recipe Title' name='title' style="width: 400px;" />
+        <textarea style="width: 400px; " rows=5 placeholder="Description" name="discription"></textarea>
+        <div>
+            <input type="text" placeholder="Preparation time" name="preparation_time" style="width: 350px;" />Minutes
+        </div>
+        <div>
+            <input type="text" placeholder="Feed this many " name="feed_this_many" style="width: 350px;" />People
+        </div>
+    </div>
+</div>

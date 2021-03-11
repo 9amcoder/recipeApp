@@ -30,4 +30,8 @@ export class Recipe{
         this.cover_photo = cp;
         
     }
+
+    public static createBlank():Recipe{
+        return new Recipe('', '',0, 0,[ ], [], " ")
+    }
 }

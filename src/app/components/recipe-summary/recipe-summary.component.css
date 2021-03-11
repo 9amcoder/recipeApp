@@ -23,4 +23,5 @@ div.recipe-card {
     float: center;
     padding-top: 15px;
     margin-top: 15px;
+    width: 600px;
 }
