@@ -40,4 +40,8 @@ export class RecipeListComponent {
     this.recipe_in_progress = Recipe.createBlank();
   }
  
+  recipeZoomedIn(recipe:Recipe):void{
+    console.log("The user cilicked ");
+    console.log(JSON.stringify(recipe, null, 2))
+  }
 }

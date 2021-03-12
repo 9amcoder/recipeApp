@@ -1,7 +1,7 @@
 <h1>This is list of all available recipes</h1>
 
 <div *ngFor="let recipe of recipes">
-    <app-recipe-summary [recipe]="recipe"></app-recipe-summary>
+    <app-recipe-summary [recipe]="recipe" (zoomIn)="recipeZoomedIn(recipe)"></app-recipe-summary>
 </div>
 
 <div style="clear: both"></div>

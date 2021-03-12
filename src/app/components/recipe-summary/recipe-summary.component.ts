@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output ,EventEmitter} from '@angular/core';
 import { Recipe } from 'src/app/model/recipe';
 
 @Component({
@@ -11,9 +11,16 @@ export class RecipeSummaryComponent implements OnInit {
   @Input()
   recipe !: Recipe;
 
+  @Output()
+  zoomIn: EventEmitter<Recipe> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  fireZoomInEvent(){
+    this.zoomIn.emit(this.recipe);
   }
 
 }
