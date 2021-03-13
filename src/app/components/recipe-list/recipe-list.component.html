@@ -1,4 +1,8 @@
-<h1>This is list of all available recipes</h1>
+<div style="float: right;">
+    <input type="button" value="Toggle Dark BG" (click)="toggleDarkBackground()" />
+    <input type="button" value="Toggle Color" (click)="toggleTitleColor()" />
+</div>
+<h1 class="{{use_dark_background ? 'darkbg':''}}" [style.color]="title_text_color">This is list of all available recipes</h1>
 
 <div *ngFor="let recipe of recipes">
     <app-recipe-summary [recipe]="recipe" (zoomIn)="recipeZoomedIn(recipe)"></app-recipe-summary>

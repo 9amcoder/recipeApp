@@ -8,14 +8,19 @@ import { Recipe } from 'src/app/model/recipe';
 })
 export class RecipeListComponent {
 
+  title_text_color = 'red';
+
   recipe_in_progress: Recipe;
   
   recipes: Recipe[];
-
+  
+  use_dark_background: boolean | undefined;
   /**
    *
    */
   constructor() {
+
+    
     this.recipe_in_progress = Recipe.createBlank();
 
     this.recipes = [
@@ -43,5 +48,17 @@ export class RecipeListComponent {
   recipeZoomedIn(recipe:Recipe):void{
     console.log("The user cilicked ");
     console.log(JSON.stringify(recipe, null, 2))
+  }
+
+  toggleDarkBackground():void{
+    this.use_dark_background = !this.use_dark_background;
+  }
+
+  toggleTitleColor():void{
+    if(this.title_text_color === 'red'){
+      this.title_text_color = 'black'
+    }else{
+      this.title_text_color = 'red';
+    }
   }
 }

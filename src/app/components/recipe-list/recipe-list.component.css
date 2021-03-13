@@ -11,3 +11,7 @@ div.newrecipe input {
 div.newrecipe textarea {
     margin-bottom: 10px;
 }
+
+.darkbg {
+    background-color: #aaaaaa;
+}
