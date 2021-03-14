@@ -58,7 +58,7 @@ export class RecipeListComponent {
     if(this.title_text_color === 'red'){
       this.title_text_color = 'black'
     }else{
-      this.title_text_color = 'red';
+      this.title_text_color = 'black';
     }
   }
 }

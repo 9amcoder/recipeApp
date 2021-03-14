@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {RouterModule } from '@angular/router'
 import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -16,7 +16,19 @@ import { from } from 'rxjs';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+        path: 'recipes',
+        component: RecipeListComponent
+      },
+      {
+        path:'',
+        redirectTo: '/recipes',
+        pathMatch: 'full'
+      }
+     
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

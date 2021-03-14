@@ -13,16 +13,25 @@
 <div class="newrecipe card" style="width: 600px">
     <h4 class="card-header">Add New Recipe</h4>
     <div class="card-body">
-        <input type="text" [(ngModel)]="recipe_in_progress.title" placeholder="Recipe Title" name="title" style="width: 400px" />
-        <textarea [(ngModel)]="recipe_in_progress.description" style="width: 400px" rows="5" placeholder="Description" name="discription"></textarea>
-        <div>
-            <input [(ngModel)]="recipe_in_progress.preparation_time" type="text" placeholder="Preparation time" name="preparation_time" style="width: 350px" />Minutes
+        <div class="input-group">
+            <input type="text" class="form-control" [(ngModel)]="recipe_in_progress.title" placeholder="Recipe Title" name="title" style="width: 400px" />
         </div>
-        <div>
-            <input [(ngModel)]="recipe_in_progress.feed_this_many" type="text" placeholder="Feed this many " name="feed_this_many" style="width: 350px" />People
+
+        <div class="input-group">
+            <textarea [(ngModel)]="recipe_in_progress.description" class="form-control" style="width: 400px" rows="5" placeholder="Description" name="discription"></textarea>
         </div>
-        <div>
-            <input type="button" value="Add Recipe" (click)="addRecipeCliked()">
+
+        <div class="input-group">
+            <input [(ngModel)]="recipe_in_progress.preparation_time" class="form-control" type="text" placeholder="Preparation time" name="preparation_time" style="width: 350px" />Minutes
         </div>
+
+        <div class="input-group">
+            <input [(ngModel)]="recipe_in_progress.feed_this_many" class="form-control" type="text" placeholder="Feed this many " name="feed_this_many" style="width: 350px" />People
+        </div>
+
+        <div class="input-group">
+            <input type="button" value="Add Recipe" class="btn btn-primary" (click)="addRecipeCliked()">
+        </div>
+
     </div>
 </div>

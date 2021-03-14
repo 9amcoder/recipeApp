@@ -1,5 +1,5 @@
 div.cover-photo-holder {
-    float: center;
+    float: right;
 }
 
 div.cover-photo-holder img {
@@ -17,6 +17,16 @@ div.recipe {
 
 div.recipe h4 {
     font-size: 120%;
+}
+
+div.recipe p {
+    margin-bottom: 10px;
+}
+
+div.recipe div.sub-title {
+    float: left;
+    font-weight: bold;
+    width: 150px;
 }
 
 div.recipe-card {
