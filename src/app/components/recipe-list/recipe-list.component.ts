@@ -24,18 +24,39 @@ export class RecipeListComponent {
     this.recipe_in_progress = Recipe.createBlank();
 
     this.recipes = [
-      new Recipe('Banana bread', 
-      'This is banana bread', 1,2,
-      [], [], ''),
-      new Recipe('Farm bread', 
-      'This is Farm bread', 3,4,
-      [], [], ''),
-      new Recipe('Beef', 
-      'This is Beef', 5,6,
-      [], [], ''),
-      new Recipe('Kabab ', 
-      'This is Kabab', 7,8,
-      [], [], '')
+      
+      Recipe.recipeFromJSON({
+        'id':1,
+        'title':'abc',
+        'description': 's',
+        'feeds_this_many': 4,
+        'preparation_time':60,
+        'ingredients': [
+          {'ingredient': 'plain flour'},
+          {'ingredient':'butter'}
+        ],
+        'instructions':[
+          {'instruction': 'pour the water'},
+          {'instruction': 'set temprature 40 degree'},
+        ]
+
+      }),
+      Recipe.recipeFromJSON({
+        'id':2,
+        'title':'adas2',
+        'description': 's',
+        'feeds_this_many': 4,
+        'preparation_time':60,
+        'ingredients': [
+          {'ingredient': 'plain flour'},
+          {'ingredient':'butter'}
+        ],
+        'instructions':[
+          {'instruction': 'pour the water'},
+          {'instruction': 'set temprature 40 degree'},
+        ]
+
+      })
     ]
   }
 

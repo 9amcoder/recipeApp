@@ -1,0 +1,15 @@
+<div class='recipe-card'>
+    <h5 class="card-header">{{ recipe.title }}</h5>
+    <div class="card-body">
+        <div class="cover-photo-holder">
+            <img style="height: 150px; width: 150px" src="{{ this.recipe.cover_photo ? this.recipe.cover_photo : '/assets/emptybowl.jpg' }}" />
+        </div>
+        <p>{{ recipe.description }}</p>
+        <div>
+            <div class="sub-title">Preparation Time</div>
+            <div>{{recipe.preparation_time}}</div>
+            <div class="sub-title">Feed this many:</div>
+            <div>{{recipe.feed_this_many}}</div>
+        </div>
+    </div>
+</div>
